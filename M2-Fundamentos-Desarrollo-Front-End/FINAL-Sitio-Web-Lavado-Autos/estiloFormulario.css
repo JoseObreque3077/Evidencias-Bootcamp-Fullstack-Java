@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(212, 230, 230);
+}
+
+/* Formato del texto de la etiqueta de error */
+label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Formato del fondo de la etiqueta de error */
+label.error.fail-alert {
+    border-radius: 4px;
+    line-height: 1;
+    padding: 2px 0 6px 6px;
+    background: #ffe6eb;
+}
+
+/* Formato de borde de campo validado correctamente */
+input.valid.success-alert {
+    border: 2px solid #4CAF50;
+    color: green;
+}
+
+/* Formato de texto y color de borde del campo que presenta error al validar */
+input.error, textarea.error {
+    border: 1px dashed red; /* Borde con linea entrecortada color rojo */
+    font-weight: 300;
+    color: red; /* Color de fuente rojo */
+}
