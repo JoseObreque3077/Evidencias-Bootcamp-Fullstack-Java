@@ -1,0 +1,17 @@
+body {
+    background-color: darkgray;
+}
+
+.padding-0 {
+    padding-left: 0.25vw;
+    padding-right: 0.25vw;
+}
+
+.responsive-width {
+    font-size: 1.5vw;
+
+}
+
+.btn {
+    white-space: normal;
+}

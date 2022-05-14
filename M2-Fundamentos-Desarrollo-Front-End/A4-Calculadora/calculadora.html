@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="formato.css">
+    </head>
+    <header>
+        <header>
+            <h1 class="text-center mb-3">Calculadora</h1>
+        </header>
+    </header>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col padding-0">
+                    <input class="form-control text-center" type="text" name="resultado" id="input_res" readonly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 padding-0">
+                    <button class="btn btn-primary form-control mt-3 mb-1 responsive-width" id="n1" onclick="agregar('1')">1</button>
+                    <button class="btn btn-primary form-control mb-1 responsive-width" id="n4" onclick="agregar('4')">4</button>
+                    <button class="btn btn-primary form-control mb-1 responsive-width" id="n7" onclick="agregar('7')">7</button>
+                    <button class="btn btn-primary form-control mb-1 responsive-width" id="n0" onclick="agregar('0')">0</button>
+                    <button class="btn btn-primary form-control mb-1 responsive-width" id="punto" onclick="agregar('.')">.</button>
+                </div>
+                
+                <div class="col-3 padding-0">
+                    <button class="btn btn-primary form-control mt-3 mb-1 responsive-width" id="n2" onclick="agregar('2')">2</button>
+                    <button class="btn btn-primary form-control mb-1 responsive-width" id="n5" onclick="agregar('5')">5</button>
+                    <button class="btn btn-primary form-control mb-1 responsive-width" id="n8" onclick="agregar('8')">8</button>
+                    <button class="btn btn-primary form-control mb-1 responsive-width" id="par1" onclick="agregar('(')">(</button>
+                    <button class="btn btn-success form-control mb-1 responsive-width" id="op_borrar1" onclick="boton_borrar2()">CE</button>
+                </div>
+
+                <div class="col-3 padding-0">
+                    <button class="btn btn-primary form-control mt-3 mb-1 responsive-width" id="n3" onclick="agregar('3')">3</button>
+                    <button class="btn btn-primary form-control mb-1 responsive-width" id="n6" onclick="agregar('6')">6</button>
+                    <button class="btn btn-primary form-control mb-1 responsive-width" id="n9" onclick="agregar('9')">9</button>
+                    <button class="btn btn-primary form-control mb-1 responsive-width" id="par2" onclick="agregar(')')">)</button>
+                    <button class="btn btn-success form-control mb-1 responsive-width" id="op_borrar2" onclick="boton_borrar()">C</button>
+                </div>
+
+                <div class="col-3 padding-0">
+                    <button class="btn btn-warning form-control mt-3 mb-1 responsive-width" id="op_suma" onclick="agregar('+')">+</button>
+                    <button class="btn btn-warning form-control mb-1 responsive-width" id="op_resta" onclick="agregar('-')">-</button>
+                    <button class="btn btn-warning form-control mb-1 responsive-width" id="op_mult" onclick="agregar('*')">*</button>
+                    <button class="btn btn-warning form-control mb-1 responsive-width" id="op_div" onclick="agregar('/')">/</button>
+                    <button class="btn btn-danger form-control mb-1 responsive-width" id="op_calculo" onclick="boton_calculo()">=</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

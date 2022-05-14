@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario con Jquery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+    <script src="logica.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col mb-4">
+                <h1 class="display1 text-center pt-3">Formulario de Inscripción</h1>
+                <h4 class="text-center">Validación usando jQuery + jQuery Validation Plugin</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">Por favor, ingrese la información solicitada a continuación:</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form id="formulario" method="post">
+                    <div class="row my-2">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <label for="nombres">Nombres:</label>
+                            <input class="form-control" type="text" id="nombres" name="nombres" placeholder="Ej: José Eduardo" title="Ingrese sus nombres.">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <label for="apellido1">Primer Apellido:</label>
+                            <input class="form-control" type="text" id="apellido1" name="apellido1" placeholder="Ej: Obreque" title="Ingrese su primer apellido.">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <label for="apellido2">Segundo Apellido:</label>
+                            <input class="form-control" type="text" id="apellido2" name="apellido2" placeholder="Ej: Fuentes" title="Ingrese su segundo apellido.">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <label for="edad">Edad:</label>
+                            <input class="form-control" type="text" name="edad" id="edad" name="edad" title="Ingrese su edad (entre 1 y 99)" placeholder="Ej: 20">
+                        </div>   
+                    </div>
+                    <div class="row my-2">
+                        <div class="col">
+                            <label for="region">Región:</label>
+                            <select class="form-select" id="region" name="region">
+                                <option value="">Seleccione región...</option> 
+                                <option value="Región de Arica y Parinacota">Región de Arica y Parinacota</option>
+                                <option value="Región de Tarapacá">Región de Tarapacá</option>
+                                <option value="Región de Antofagasta">Región de Antofagasta</option>
+                                <option value="Región de Atacama">Región de Atacama</option>
+                                <option value="Región de Coquimbo">Región de Coquimbo</option>
+                                <option value="Región de Valparaíso">Región de Valparaíso</option>
+                                <option value="Región Metropolitana">Región Metropolitana</option>
+                                <option value="Región del Libertador General Bernardo O'Higgins">Región del Libertador General Bernardo O'Higgins</option>
+                                <option value="Región del Maule">Región del Maule</option>
+                                <option value="Región del Ñuble">Región del Ñuble</option>
+                                <option value="Región del Biobío">Región del Biobío</option>
+                                <option value="Región de La Araucanía">Región de La Araucanía</option>
+                                <option value="Región de los Ríos">Región de los Ríos</option>
+                                <option value="Región de los Lagos">Región de los Lagos</option>
+                                <option value="Región del Biobío">Región del Biobío</option>
+                                <option value="Región de Aysén del General Carlos Ibáñez del Campo">Región de Aysén del General Carlos Ibáñez del Campo</option>
+                                <option value="Región de Magallanes y la Antártica Chilena">Región de Magallanes y la Antártica Chilena</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <label for="comuna">Comuna:</label>
+                            <input class="form-control" type="text" id="comuna" name="comuna" title="Ingrese su comuna" placeholder="Ej: Villarrica">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <label for="direccion">Dirección:</label>
+                            <input class="form-control" type="text" name="direccion" id="direccion" title="Ingrese su dirección" placeholder="Ej: Av. Costanera 0001">
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4">
+                            <label>¿Tiene Alergias?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="alergias" id="alergias1" value="1"/>
+                                <label id="al2" class="form-check-label" for="alergias1">Si</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="alergias" id="alergias2" value="0" checked/>
+                                <label id="al2" class="form-check-label" for="alergias2">No</label>
+                            </div>
+                        </div>
+                        <div class="col-7 col-sm-7 col-md-8 col-lg-8 col-xl-8">
+                            <label for="texto1">Indique sus alergias:</label>
+                        <textarea class="md-textarea form-control" id="texto1" name="texto1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-center"></div>
+                        <button type="submit" class="btn btn-primary submit w-25">Enviar</button>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

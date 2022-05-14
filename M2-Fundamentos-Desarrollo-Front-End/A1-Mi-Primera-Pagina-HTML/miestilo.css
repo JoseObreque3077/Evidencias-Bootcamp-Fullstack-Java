@@ -1,0 +1,41 @@
+body { /* Estilos aplicados a "body" */
+    padding-left: 12em; /* Relleno hacia la izquierda */
+    color: rgb(0, 0, 0); /* Color de letra */
+    background-color: #3c71ad; /* Color de fondo */
+    font-family: Georgia, "Times New Roman", Times, serif;  } /* Lista de Fuentes */
+  
+  h1 {
+      font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif } /* Lista de Fuentes */
+
+  ul.navbar {
+      list-style-type: none; /* Estilo de viñeta: sin símbolos */
+      padding: 0; /* Sin relleno (en toda dirección) */
+      margin: 0; /* Sin márgenes (en toda dirección) */
+      position: absolute; /* Posición de la navbar: absoluta */
+      top: 2em; /* define la posición del navbar */
+      left: 1em;
+      width: 9em;
+      }
+  
+  ul.navbar li {
+      background: white; /* Color de fondo de cada elemento en navbar: blanco */
+      margin: 0.5em 0; /* Margen: arriba-abajo izq-der */
+      padding: 0.3em; /* Relleno: 0.3em (hacia el interior)*/
+      border-right: 1em solid black /* Borde derecho */
+  }
+  
+  ul.navbar a {
+      text-decoration: none 
+  }
+  a:link {
+      color: rgb(0, 0, 0); /* Color de los hipervinculos (sin abrir)*/
+  }
+  a:visited {
+      color: rgb(233, 0, 0); /* Color de los hipervinculos (abierto)*/
+  }
+
+  address {
+      margin-top: 1em; /* Margen superior: 1em*/
+      padding-top: 1em; /* Relleno superior: 1em*/
+      border-top: thin dotted /* Borde superior: linea punteada*/
+  }

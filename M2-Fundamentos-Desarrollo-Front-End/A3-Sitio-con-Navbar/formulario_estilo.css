@@ -1,0 +1,14 @@
+body { /* Estilos aplicados a "body" */
+    color: rgb(0, 0, 0); /* Color de letra */
+    background-color: #d4d9db; /* Color de fondo */
+}
+
+  #al1, #al2 {
+    color: black;}
+
+  address {
+    margin-top: 1em; /* Margen superior: 1em*/
+    padding-top: 1em; /* Relleno superior: 1em*/
+    border-top: thin dotted /* Borde superior: linea punteada*/}
+
+  
