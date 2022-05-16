@@ -1,0 +1,181 @@
+DROP TABLE aco CASCADE CONSTRAINTS;
+
+DROP TABLE car CASCADE CONSTRAINTS;
+
+DROP TABLE ciu CASCADE CONSTRAINTS;
+
+DROP TABLE cos CASCADE CONSTRAINTS;
+
+DROP TABLE fae CASCADE CONSTRAINTS;
+
+DROP TABLE guia CASCADE CONSTRAINTS;
+
+DROP TABLE pro CASCADE CONSTRAINTS;
+
+DROP TABLE rec CASCADE CONSTRAINTS;
+
+DROP TABLE rec1 CASCADE CONSTRAINTS;
+
+DROP TABLE tra1 CASCADE CONSTRAINTS;
+
+DROP TABLE tra2 CASCADE CONSTRAINTS;
+
+-- predefined type, no DDL - MDSYS.SDO_GEOMETRY
+
+-- predefined type, no DDL - XMLTYPE
+
+CREATE TABLE aco (
+    id4   NUMBER(1) NOT NULL,
+    nom7  VARCHAR2(5 CHAR) NOT NULL
+);
+
+ALTER TABLE aco ADD CONSTRAINT aco_pk PRIMARY KEY ( id4 );
+
+CREATE TABLE car (
+    id1   NUMBER(6) NOT NULL,
+    alt1  NUMBER(5, 2) NOT NULL,
+    alt2  NUMBER(5, 2) NOT NULL,
+    alt3  NUMBER(5, 2) NOT NULL,
+    alt4  NUMBER(5, 2) NOT NULL,
+    alt5  NUMBER(5, 2),
+    alt6  NUMBER(5, 2),
+    alt7  NUMBER(5, 2),
+    alt8  NUMBER(5, 2),
+    mr    NUMBER(6, 2) NOT NULL,
+    cal   VARCHAR2(15 CHAR) NOT NULL,
+    des   VARCHAR2(25 CHAR) NOT NULL,
+    lar   NUMBER(6, 2) NOT NULL
+);
+
+ALTER TABLE car ADD CONSTRAINT car_pk PRIMARY KEY ( id1 );
+
+CREATE TABLE ciu (
+    id2   NUMBER(4) NOT NULL,
+    nom3  VARCHAR2(20 CHAR) NOT NULL
+);
+
+ALTER TABLE ciu ADD CONSTRAINT ciu_pk PRIMARY KEY ( id2 );
+
+CREATE TABLE cos (
+    rut2  NUMBER(8) NOT NULL,
+    dv2   VARCHAR2(1 CHAR) NOT NULL,
+    nom2  VARCHAR2(25 CHAR) NOT NULL
+);
+
+ALTER TABLE cos ADD CONSTRAINT cos_pk PRIMARY KEY ( rut2 );
+
+CREATE TABLE fae (
+    n1    NUMBER(6) NOT NULL,
+    nom8  VARCHAR2(25 CHAR) NOT NULL
+);
+
+ALTER TABLE fae ADD CONSTRAINT fae_pk PRIMARY KEY ( n1 );
+
+CREATE TABLE guia (
+    n2    NUMBER(6) NOT NULL,
+    dia2  NUMBER(2) NOT NULL,
+    mes2  NUMBER(2) NOT NULL,
+    ann2  NUMBER(4) NOT NULL
+);
+
+ALTER TABLE guia ADD CONSTRAINT guia_pk PRIMARY KEY ( n2 );
+
+CREATE TABLE pro (
+    rut1  NUMBER(8) NOT NULL,
+    dv1   VARCHAR2(1 CHAR) NOT NULL,
+    nom1  VARCHAR2(30 CHAR) NOT NULL,
+    ap1   VARCHAR2(25 CHAR) NOT NULL,
+    ap2   VARCHAR2(25 CHAR) NOT NULL
+);
+
+ALTER TABLE pro ADD CONSTRAINT pro_pk PRIMARY KEY ( rut1 );
+
+CREATE TABLE rec (
+    id3        NUMBER(6) NOT NULL,
+    dia3       NUMBER(2) NOT NULL,
+    mes3       NUMBER(2) NOT NULL,
+    ann3       NUMBER(4) NOT NULL,
+    h1         NUMBER(2) NOT NULL,
+    m1         NUMBER(2) NOT NULL,
+    pro_rut1   NUMBER(8),
+    fae_n1     NUMBER(6),
+    tra1_rut3  NUMBER(8),
+    cos_rut2   NUMBER(8),
+    car_id1    NUMBER(6) NOT NULL,
+    tra2_rut4  NUMBER(8) NOT NULL,
+    aco_id4    NUMBER(1) NOT NULL,
+    ciu_id2    NUMBER(4) NOT NULL,
+    guia_n2    NUMBER(6) NOT NULL,
+    rec1_rut5  NUMBER(8) NOT NULL
+);
+
+ALTER TABLE rec ADD CONSTRAINT rec_pk PRIMARY KEY ( id3 );
+
+CREATE TABLE rec1 (
+    rut5  NUMBER(8) NOT NULL,
+    dv5   VARCHAR2(1 CHAR) NOT NULL,
+    nom6  VARCHAR2(20) NOT NULL,
+    ap5   VARCHAR2(20 CHAR) NOT NULL,
+    ap6   VARCHAR2(20 CHAR) NOT NULL
+);
+
+ALTER TABLE rec1 ADD CONSTRAINT rec1_pk PRIMARY KEY ( rut5 );
+
+CREATE TABLE tra1 (
+    rut3  NUMBER(8) NOT NULL,
+    dv3   VARCHAR2(1 CHAR) NOT NULL,
+    nom4  VARCHAR2(25 CHAR) NOT NULL
+);
+
+ALTER TABLE tra1 ADD CONSTRAINT tra1_pk PRIMARY KEY ( rut3 );
+
+CREATE TABLE tra2 (
+    rut4  NUMBER(8) NOT NULL,
+    dv4   VARCHAR2(1 CHAR) NOT NULL,
+    nom5  VARCHAR2(20 CHAR) NOT NULL,
+    ap3   VARCHAR2(20 CHAR) NOT NULL,
+    ap4   VARCHAR2(20 CHAR) NOT NULL,
+    pat   VARCHAR2(6 CHAR) NOT NULL
+);
+
+ALTER TABLE tra2 ADD CONSTRAINT tra2_pk PRIMARY KEY ( rut4 );
+
+ALTER TABLE rec
+    ADD CONSTRAINT rec_aco_fk FOREIGN KEY ( aco_id4 )
+        REFERENCES aco ( id4 );
+
+ALTER TABLE rec
+    ADD CONSTRAINT rec_car_fk FOREIGN KEY ( car_id1 )
+        REFERENCES car ( id1 );
+
+ALTER TABLE rec
+    ADD CONSTRAINT rec_ciu_fk FOREIGN KEY ( ciu_id2 )
+        REFERENCES ciu ( id2 );
+
+ALTER TABLE rec
+    ADD CONSTRAINT rec_cos_fk FOREIGN KEY ( cos_rut2 )
+        REFERENCES cos ( rut2 );
+
+ALTER TABLE rec
+    ADD CONSTRAINT rec_fae_fk FOREIGN KEY ( fae_n1 )
+        REFERENCES fae ( n1 );
+
+ALTER TABLE rec
+    ADD CONSTRAINT rec_guia_fk FOREIGN KEY ( guia_n2 )
+        REFERENCES guia ( n2 );
+
+ALTER TABLE rec
+    ADD CONSTRAINT rec_pro_fk FOREIGN KEY ( pro_rut1 )
+        REFERENCES pro ( rut1 );
+
+ALTER TABLE rec
+    ADD CONSTRAINT rec_rec1_fk FOREIGN KEY ( rec1_rut5 )
+        REFERENCES rec1 ( rut5 );
+
+ALTER TABLE rec
+    ADD CONSTRAINT rec_tra1_fk FOREIGN KEY ( tra1_rut3 )
+        REFERENCES tra1 ( rut3 );
+
+ALTER TABLE rec
+    ADD CONSTRAINT rec_tra2_fk FOREIGN KEY ( tra2_rut4 )
+        REFERENCES tra2 ( rut4 );
