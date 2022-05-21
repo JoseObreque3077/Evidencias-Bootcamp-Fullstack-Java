@@ -1,0 +1,9 @@
+# Actividad 10: Ejercicios Arrays
+## Requerimientos:
+Se solicitó completar las actividades siguientes:
+* Recibir una palabra por consola, separar en vocales y consonantes, almacenar estos valores en arrays separados e imprimir sus contenidos por consola.
+* Se solicitó crear una matriz (con valores por defecto) usando arrays e imprimir su estructura y contenido por consola.
+
+## Lenguajes y Herramientas Utilizadas:
+* Java
+* Eclipse
