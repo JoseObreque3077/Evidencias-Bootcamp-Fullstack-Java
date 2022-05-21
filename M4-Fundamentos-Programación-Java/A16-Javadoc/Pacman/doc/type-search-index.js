@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"App"},{"p":"<Unnamed>","l":"Bloque"},{"p":"<Unnamed>","l":"Escenario"},{"p":"<Unnamed>","l":"Fantasma"},{"p":"<Unnamed>","l":"Pacman"},{"p":"<Unnamed>","l":"Personaje"},{"p":"<Unnamed>","l":"Punto"},{"p":"<Unnamed>","l":"Vertice"}];updateSearchResults();
