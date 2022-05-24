@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"app"},{"l":"cajero"},{"l":"cuenta"},{"l":"logicaMenu"},{"l":"operacion"},{"l":"tarjeta"}];updateSearchResults();
