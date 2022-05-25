@@ -8,4 +8,4 @@ Se solicitó programar un sitio web usando servlets y JSP, que contenga las sigu
 ## Lenguajes y Herramientas Utilizadas:
 * Java
 * Eclipse
-* MySQL
+* MySQL 
