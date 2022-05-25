@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+body {
+	background-image: url("https://img.freepik.com/free-vector/hand-drawn-home-appliances-set_160308-201.jpg");
+	background-color: rgba(0, 0, 0, 0.527);
+	background-blend-mode: darken;
+}
+
+#menu1 {
+	background-color: rgb(152, 188, 236);
+}
+
+#menu2 {
+	background-color: rgb(245, 205, 132);
+}
