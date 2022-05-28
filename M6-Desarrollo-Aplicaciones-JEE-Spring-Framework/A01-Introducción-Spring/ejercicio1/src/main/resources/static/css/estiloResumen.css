@@ -1,0 +1,11 @@
+@charset "UTF-8";
+body {
+	background-image: url("https://wallpapercave.com/wp/wp5618848.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: white;
+}
+
+.tarjeta-tabla {
+	background-color: #c7c7c7;
+}

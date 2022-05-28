@@ -1,0 +1,33 @@
+.body-estilo-1{
+    background-attachment: fixed;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.body-estilo-2 {
+    background-attachment: fixed;
+    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+}
+
+.estilo-tarjeta-login {
+    background-color: #a7b9b9;
+}
+
+.color-tarjeta-tabla {
+    background-color: #faedea;
+}
+
+.color-tarjeta-catalogo, color-tarjeta-autores {
+    background-color: #e6f1e6;
+}
+.color-tarjeta-logout {
+    font-size: smaller;
+    background-color: #adc9ad;
+}
+
+.estilo-boton-logout {
+    background-color: #8067a4;
+}
+
+.estilo-navbar{
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}

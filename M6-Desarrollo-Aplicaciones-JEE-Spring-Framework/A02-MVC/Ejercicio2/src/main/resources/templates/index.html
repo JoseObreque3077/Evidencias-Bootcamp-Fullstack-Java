@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="/css/estiloForm.css" rel="stylesheet">
+<title>Registro de Mascotas</title>
+</head>
+<body class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			<h1 class="text-center text-light mt-3">Registro de Mascotas</h1>
+		</div>
+	</div>
+	<div class="row mt-5 mb-3 justify-content-end">
+		<div class="col-md-5">
+			<div class="card" id="tarjetaForm">
+				<div class="card-body">
+					<h5 class="card-title text-center mb-3">Registre a su mascota aquí:</h5>
+					<form class="form" th:action="@{/resumen}" method="post" th:object="${miMascota}">
+						<div class="form-group">
+							<label for="id">Id</label>
+							<!-- th:field vincula un campo del formulario con un atributo de la clase Mascota -->
+							<!-- Se debe evitar el uso del campo "id" ya que th:field ocupa ese "puesto" en el HTML-->
+							<input type="number" placeholder="Id" name="id" class="form-control" th:field="*{id}">
+							<!-- #fields.hasErrors() retorna true si hay errores encontrados por la validación de ese atributo -->
+							<!-- th:errors permite mostrar todos los errores encontrados por la validación de ese atributo -->
+							<!-- th:class permite asignarle una clase a este elemento HTML, en este caso, solo un formato gráfico -->
+							<span th:if="${#fields.hasErrors('id')}" th:errors="*{id}" th:class="error">Id error</span>
+						</div>
+						<div class="form-group mt-2">
+							<label for="nombre">Nombre</label>
+							<input type="text" name="nombre" class="form-control" th:field="*{nombre}" placeholder="Nombre de la Mascota">
+							<span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" th:class="error">Nombre error</span>
+						</div>
+						<div class="form-group mt-2">
+							<label for="nombre" id="especie">Especie</label>
+							<select class="form-select" name="especie" th:field="*{especie}">
+								<option value="0" selected>Seleccione una especie</option>
+								<option value="Perro">Perro</option>
+								<option value="Gato">Gato</option>
+								<option value="Conejo">Conejo</option>
+								<option value="Loro">Loro</option>
+								<option value="Hurón">Hurón</option>
+							</select>
+							<span th:if="${#fields.hasErrors('especie')}" th:errors="*{especie}" th:class="error">Especie error</span>
+						</div>
+						<div class="form-group mt-2">
+							<label for="edad">Edad</label>
+							<input type="number" name="edad" class="form-control" th:field="*{edad}" placeholder="Edad de la mascota">
+							<span th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}" th:class="error">Edad error</span>
+						</div>
+						<div class="form-group form-check mt-2 mb-2">
+							<input type="checkbox" name="vacuna" class="form-check-input" th:field="*{vacunado}">
+							<label class="form-check-label" for="vacuna">Vacunado</label>
+						</div>
+						<div class="form-group d-flex justify-content-center mt-3">
+							<button type="submit" class="btn btn-primary boton-submit-especial text-center">Registrar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

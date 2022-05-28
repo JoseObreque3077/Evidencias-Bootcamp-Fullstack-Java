@@ -1,0 +1,16 @@
+body{
+    background-color: lightblue;
+}
+
+.estilo-tarjeta-login {
+    background-color: #a7b9b9;
+}
+
+.color-tarjeta-tabla {
+    background-color: #faedea;
+}
+
+.color-tarjeta-logout {
+    font-size: smaller;
+    background-color: #adc9ad;
+}
